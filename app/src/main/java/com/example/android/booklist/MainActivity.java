@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         //Find a reference to the ButtonView in the layout
         mButton = (Button) findViewById(R.id.search_button);
 
-        // Create a new adapter that takes an empty list of earthquakes as input
+        // Create a new adapter that takes an empty list of books as input
         mAdapter = new BookAdapter(this, new ArrayList<BookList>());
 
         // Find a reference to the {@link ListView} in the layout
