@@ -26,6 +26,7 @@ import static com.example.android.booklist.MainActivity.LOG_TAG;
 
 public final class Utilities {
 
+
     /**
      * Create a private constructor because no one should ever create a {@link Utilities} object.
      * This class is only meant to hold static variables and methods, which can be accessed
@@ -35,7 +36,11 @@ public final class Utilities {
     }
 
     /**
+
      * Query the Google API and return a list of {@link BookList} objects.
+
+     * Query the Google dataset and return a list of {@link BookList} objects.
+
      */
     public static List<BookList> fetchBookData(String requestUrl) {
         // Create URL object
@@ -49,10 +54,10 @@ public final class Utilities {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+        // Extract relevant fields from the JSON response and create a list of {@link Books}s
         List<BookList> books = extractBooks(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
+        // Return the list of {@link Books}s
         return books;
     }
 
