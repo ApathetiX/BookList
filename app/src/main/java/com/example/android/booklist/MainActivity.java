@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
+
                 //Store the query
                 String searchQuery = mEditText.getText().toString().trim();
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // Set the adapter on the {@link ListView}
                 // so the list can be populated in the user interface
                 bookListView.setAdapter(mAdapter);
+
 
             }
         });
