@@ -38,7 +38,7 @@ public final class Utilities {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link BookList} objects.
+     * Query the Google dataset and return a list of {@link BookList} objects.
      */
     public static List<BookList> fetchBookData(String requestUrl) {
         // Create URL object
@@ -52,10 +52,10 @@ public final class Utilities {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+        // Extract relevant fields from the JSON response and create a list of {@link Books}s
         List<BookList> books = extractBooks(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
+        // Return the list of {@link Books}s
         return books;
     }
 
