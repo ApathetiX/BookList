@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Resets the UI on button click
-                getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
+
 
                 //Store the query
                 String searchQuery = mEditText.getText().toString().trim();
@@ -69,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // If there was text in the query then add it to the URL
                 if (searchQuery != null && searchQuery != "") {
                     BOOK_URL += searchQuery;
+
+                    //Resets the UI on button click
+                    getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
                 }
 
                 // Set the adapter on the {@link ListView}
@@ -125,6 +127,3 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     }
 }
-
-
-
