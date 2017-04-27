@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Book List</string>
+
+    <!-- Header that goes above the title of the earthquake event [CHAR LIMIT=50] -->
+    <string name="header_title">Title</string>
+
+    <!-- Header that goes above the date of the earthquake event [CHAR LIMIT=50] -->
+    <string name="header_author">Author</string>
+
+    <!-- Placeholder text that goes in the query of the earthquake event [CHAR LIMIT=50] -->
+    <string name="query">Enter query here</string>
+
+    <!-- Placeholder text that goes in the query of the earthquake event [CHAR LIMIT=50] -->
+    <string name="search">Search</string>
+
+
+</resources>
