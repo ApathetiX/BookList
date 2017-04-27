@@ -26,7 +26,7 @@ import static com.example.android.booklist.MainActivity.LOG_TAG;
 
 public final class Utilities {
 
-    /** Sample JSON response for a USGS query */
+    /** Sample JSON response for a Google API query */
     private static final String SAMPLE_JSON_RESPONSE = "https://www.googleapis.com/books/v1/volumes?q=";
 
     /**
