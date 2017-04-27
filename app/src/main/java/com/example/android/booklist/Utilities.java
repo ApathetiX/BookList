@@ -151,7 +151,7 @@ public final class Utilities {
         // Catch the exception so the app doesn't crash, and print the error message to the logs.
         try {
             // Create a JSONObject from the SAMPLE_JSON_RESPONSE string
-            JSONObject baseJsonResponse = new JSONObject(SAMPLE_JSON_RESPONSE);
+            JSONObject baseJsonResponse = new JSONObject(bookJSON);
 
             // Extract the JSONArray associated with the key called "items",
             // which represents a list of books.

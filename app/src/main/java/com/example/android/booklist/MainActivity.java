@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Resets the UI on button click
                 getLoaderManager().restartLoader(BOOK_LOADER_ID, null, MainActivity.this);
 
                 //Store the query
