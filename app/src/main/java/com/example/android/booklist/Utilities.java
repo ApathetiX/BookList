@@ -172,7 +172,13 @@ public final class Utilities {
                 String title = volumeInfo.getString("title");
 
                 // Extract the value for the key called "author"
-                String author = volumeInfo.getString("authors");
+                String author = "N/A";
+                JSONArray authors = volumeInfo.optJSONArray("authors");
+
+                if (authors != null) {
+                    authors = volumeInfo.getJSONArray("authors");
+                    author = authors.getString(0);
+                }
 
                 // Create a new {@link BookList} object with title, and author from the JSON response.
                 BookList book = new BookList(title, author);
