@@ -170,10 +170,9 @@ public final class Utilities {
 
                 // Extract the value for the key called "author"
                 String author = "N/A";
-                JSONArray authors = volumeInfo.optJSONArray("authors");
 
-                if (authors != null) {
-                    authors = volumeInfo.getJSONArray("authors");
+                if (volumeInfo.has("authors")) {
+                    JSONArray authors = volumeInfo.getJSONArray("authors");
                     author = authors.getString(0);
                     Log.e("Utilities", "Problem parsing authors");
                 }
