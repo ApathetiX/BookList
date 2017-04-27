@@ -175,6 +175,7 @@ public final class Utilities {
                 if (authors != null) {
                     authors = volumeInfo.getJSONArray("authors");
                     author = authors.getString(0);
+                    Log.e("Utilities", "Problem parsing authors");
                 }
 
                 // Create a new {@link BookList} object with title, and author from the JSON response.
@@ -189,7 +190,7 @@ public final class Utilities {
             // If an error is thrown when executing any of the above statements in the "try" block,
             // catch the exception here, so the app doesn't crash. Print a log message
             // with the message from the exception.
-            Log.e("Utilities", "Problem parsing the book JSON results", e);
+            Log.e(LOG_TAG, "Problem parsing the book JSON results", e);
         }
         //Returns the list of books
         return books;
