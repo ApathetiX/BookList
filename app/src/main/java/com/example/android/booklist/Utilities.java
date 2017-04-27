@@ -26,9 +26,6 @@ import static com.example.android.booklist.MainActivity.LOG_TAG;
 
 public final class Utilities {
 
-    /** Sample JSON response for a USGS query */
-    private static final String SAMPLE_JSON_RESPONSE = "https://www.googleapis.com/books/v1/volumes?q=";
-
     /**
      * Create a private constructor because no one should ever create a {@link Utilities} object.
      * This class is only meant to hold static variables and methods, which can be accessed
@@ -38,7 +35,7 @@ public final class Utilities {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link BookList} objects.
+     * Query the Google API and return a list of {@link BookList} objects.
      */
     public static List<BookList> fetchBookData(String requestUrl) {
         // Create URL object
