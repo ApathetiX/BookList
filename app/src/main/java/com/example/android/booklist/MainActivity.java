@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // Find a reference to the {@link ListView} in the layout
         final ListView bookListView = (ListView) findViewById(R.id.list);
 
+        // Find a reference to the empty textview in the layout
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         bookListView.setEmptyView(mEmptyStateTextView);
 
