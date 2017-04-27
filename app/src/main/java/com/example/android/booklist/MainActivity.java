@@ -1,4 +1,5 @@
 package com.example.android.booklist;
+
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Loader;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private Button mButton;
 
+    /**
+     * TextView that is displayed when the list is empty
+     */
+    private TextView mEmptyStateTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +63,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // Find a reference to the {@link ListView} in the layout
         final ListView bookListView = (ListView) findViewById(R.id.list);
 
+        mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
+        bookListView.setEmptyView(mEmptyStateTextView);
+
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 //Store the query
                 String searchQuery = mEditText.getText().toString().trim();
 
@@ -96,6 +104,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
             // because this activity implements the LoaderCallbacks interface).
             loaderManager.initLoader(BOOK_LOADER_ID, null, this);
+        } else {
+            // Update empty state with no connection error message
+            mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
 
     }
@@ -109,6 +120,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<List<BookList>> loader, List<BookList> books) {
+        // Set empty state text to display "No books found."
+        mEmptyStateTextView.setText(R.string.no_books);
+
         // Clear the adapter of previous book data
         mAdapter.clear();
 

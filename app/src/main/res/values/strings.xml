@@ -13,5 +13,11 @@
     <!-- Button placeholder text [CHAR LIMIT=50] -->
     <string name="search">Search</string>
 
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection.</string>
+
+    <!-- Text to display in the list when there are no earthquakes [CHAR LIMIT=NONE] -->
+    <string name="no_books">No books found.</string>
+
 
 </resources>

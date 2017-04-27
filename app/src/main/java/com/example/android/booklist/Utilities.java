@@ -36,11 +36,7 @@ public final class Utilities {
     }
 
     /**
-
      * Query the Google API and return a list of {@link BookList} objects.
-
-     * Query the Google dataset and return a list of {@link BookList} objects.
-
      */
     public static List<BookList> fetchBookData(String requestUrl) {
         // Create URL object
