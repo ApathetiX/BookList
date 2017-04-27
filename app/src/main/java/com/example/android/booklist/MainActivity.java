@@ -1,5 +1,4 @@
 package com.example.android.booklist;
-
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Loader;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private BookAdapter mAdapter;
 
     /**
-     * Constant value for the earthquake loader ID. We can choose any integer.
+     * Constant value for the book loader ID. We can choose any integer.
      * This really only comes into play if you're using multiple loaders.
      */
     private static final int BOOK_LOADER_ID = 1;
